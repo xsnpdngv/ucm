@@ -5,8 +5,7 @@
                                (void)(&_x == &_y); \
                                _x < _y ? _x : _y;})
 
-#define TYPE_CHECK(type, x) \
-                             ({type _x; \
+#define TYPE_CHECK(type, x)  ({type _x; \
                                __typeof__ (x) _y; \
                                (void)(&_x == &_y); \
                                3;})
