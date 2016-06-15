@@ -10,6 +10,8 @@
 #define FUNC3(arg1, arg2, arg3) \
                             arg1#arg2
 
+#define offsetof(st, m) ((size_t)&(((st *)0)->m))
+
 /* fake member of structure instead of real instance */
 #define FAKEMBR(struct_t, member) ((struct_t *)0)->member
 
