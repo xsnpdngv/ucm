@@ -22,15 +22,17 @@
 /* type of fake structure member */
 #define TYPEOF(struct_t, member) __typeof(FAKEMBR(struct_t, member))
 
-/* check whether var is character pointer (compile time error if not) */
-#define IS_STR(var)        ({char *__asdf; \
-                               (void)(__asdf == var); 1;})
-
 /* check whether var is a variable of type type (compile time error if not) */
-#define TYPE_CHK(type, var)  ({type __asdf; \
-                               __typeof(var) __zxcv; \
-                               (void)(&__asdf == &__zxcv); \
-                               1;})
+#define TYPE_CHECK(type, x)  ({type _x; \
+                               __typeof__ (x) _y; \
+                               (void)(&_x == &_y); \
+                               3;})
+
+/* check whether var is character pointer (compile time error if not) */
+#define STR_CHECK(x)         ({char *_x; \
+                               __typeof__ (x) _y; \
+                               (void)(_x == _y); \
+                               6;})
 
 /* ensures that v is a valid identifier name */
 #define VARIABLE(v) { enum v { }; }
