@@ -23,12 +23,16 @@
 #define TYPEOF(struct_t, member) __typeof(FAKEMBR(struct_t, member))
 
 /* check whether var is a variable of type type (compile time error if not) */
+/* NOTE: macros like ({expr;}) won't work in global variable's initializer
+         but can be used in main for same goal */
 #define TYPE_CHECK(type, x)  ({type _x; \
                                __typeof__ (x) _y; \
                                (void)(&_x == &_y); \
                                3;})
 
 /* check whether var is character pointer (compile time error if not) */
+/* NOTE: macros like ({expr;}) won't work in global variable's initializer
+         but can be used in main for same goal */
 #define STR_CHECK(x)         ({char *_x; \
                                __typeof__ (x) _y; \
                                (void)(_x == _y); \
