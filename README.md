@@ -1,4 +1,5 @@
-# Collection of useful macros
+Collection of useful macros
+---------------------------
 
-Tamás T. Dezső
+(c) Tamás T. Dezső
 2016
