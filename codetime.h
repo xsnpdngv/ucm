@@ -1,3 +1,5 @@
+#include <sys/time.h>
+
 #define CODETIME(Time, Code) ({struct timeval s,e;\
                                gettimeofday(&s, NULL);\
                                    Code \
