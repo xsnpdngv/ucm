@@ -1,5 +1,4 @@
-Collection of useful C macros
------------------------------
+Useful C Macros
+---------------
 
-(c) Tamás T. Dezső
-2016
+Tamás T. Dezső, 2016
